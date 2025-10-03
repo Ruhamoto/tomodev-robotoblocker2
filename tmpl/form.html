@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<link rel="icon" href="https://storage2.me-qr.com/image/2025/Aug/11/a09aaabb-7d37-4a7f-8d55-5836c7d5ee33.png">
+<script src="https://cdn.tailwindcss.com"></script>
+<html>
+<head lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<link href="style.css" rel="stylesheet">
+<title>お問い合わせフォーム</title>
+</head>
+<body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&display=swap');
+
+    body {
+        font-family: 'IBM Plex Sans JP', sans-serif;
+        background: #ffffff;
+    }
+</style>
+<div id="head">
+	<div id="head-in"><h1>ロボットブロッカー2 アンケート付きプログラム</h1></div>
+</div>
+<div id="body">
+<div class="mb-3"></div>
+<h2>お問い合わせフォーム</h2>
+<div class="mb-3"></div>
+<center>
+<ol>
+<li>当サイトに関する質問や感想などをお受けしています。</li>
+<li>以下のフォームより、必要事項を入力のうえ送信してください。</li>
+</ol>
+</center>
+<form action="!mail_cgi!" method="post">
+<input type="hidden" name="need" value="name email 問合せ種別">
+<input type="hidden" name="match" value="email email2">
+<div id="form-tbl">
+<center>
+<table summary="問合せフォーム" id="form">
+<tr>
+	<th>お名前</th>
+	<td><input type="text" name="name" size="35" class="guefu"></td>
+</tr><tr>
+	<th>メールアドレス</th>
+	<td>
+		<input type="text" name="email" size="35" class="guefu mb-1"><br>
+		<input type="text" name="email2" size="35" class="guefu"> （再度入力）
+	</td>
+</tr><tr>
+	<th>問合せ種別</th>
+	<td>
+		<input type="radio" name="問合せ種別" value="ご質問">ご質問<br>
+		<input type="radio" name="問合せ種別" value="ご相談">ご相談<br>
+		<input type="radio" name="問合せ種別" value="ご感想">ご感想<br>
+		<input type="radio" name="問合せ種別" value="ご依頼">ご依頼<br>
+		<input type="radio" name="問合せ種別" value="その他">その他
+	</td>
+</tr><tr>
+	<th>問合せ内容</th>
+	<td><textarea name="メッセージ" rows="7" cols="55" class="guefu"></textarea></td>
+</tr><tr>
+	<th>画像認証</th>
+	<td>
+		<input type="text" name="captcha" size="8" style="ime-mode:inactive" maxlength="8" class="guefu">（右画像の数字を入力）&nbsp; <img src="!captcha_cgi!?!str_crypt!" class="capt" alt="投稿キー">
+		<input type="hidden" name="str_crypt" value="!str_crypt!">
+	</td>
+</tr>
+</table>
+</center>
+<center>
+<p class="btn">
+	<input type="submit" value="送信する" class="guefu px-6 py-1.5 cursor-pointer rounded-full font-bold text-white bg-green-500 hover:bg-green-600 transition duration-300">
+	<input type="reset" value="リセット" class="guefu px-6 py-1.5 cursor-pointer rounded-full font-bold text-white bg-green-500 hover:bg-green-600 transition duration-300">
+</p>
+</center>
+</form>
+</div>
+<div class="mb-3"></div>
+<h2>個人情報の取扱いについて</h2>
+<div class="mb-3"></div>
+<center>
+<ol>
+<li>ご記入いただいた個人情報は、お問い合わせへの対応および確認のためのみに利用します。</li>
+<li>また、この目的のためにお問い合わせの記録を残すことがあります。</li>
+</ol>
+</center>
+<div class="mb-10"></div>
+</body>
+</html>
